@@ -1,0 +1,183 @@
+@charset "urf-8";
+
+/*ウィンドウ背景の設定*/
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(img/Bg.png);
+    background-size: auto;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/*ヘッダー、ナビ、フッターの共通設定*/
+header,nav,footer {
+    text-align: center;
+}
+
+/*ヘッダーの設定*/
+header {
+    background-color:#81efc3e0;
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*ページタイトルの設定*/
+h1 {
+    font-family: "DotGothic16", sans-serif;
+    font-size: 50px;
+    text-align: center;
+    line-height: 0.8;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+header p {
+    text-align: center;
+    margin: 0;
+    font-size: 16px;
+}
+
+header h1 a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/*ページ見出しの設定*/
+h2 {
+    font-family: "DotGothic16", sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+/*画像の設定*/
+.image-nijisanji {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 20px;
+  }
+
+.image-VirtuaReal {
+    display: flex;
+    justify-content: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.image-EN {
+    display: flex;
+    justify-content: left;
+    margin-top: 15px;
+}
+
+/*ナビボタンの設定*/
+.menu li {
+  list-style-type: none;
+  display: inline-block;
+  width: 180px;
+  margin: 10px 30px;
+}
+.menu a {
+  display: block;
+  padding: 10px;
+  background: #ffb87e;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+}
+.menu a:hover {
+  background: #90ddbb;
+}
+
+/*コンテンツ枠の設定*/
+#contents {
+    margin: 30px;
+    padding: 40px 80px;
+    border: 1px solid #ffffffaf;
+    background-color:#ffffffbe;
+    border-radius:10px;
+}
+
+/*ライバー紹介ページの設定*/
+.inner-box {
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.Liver-img {
+    width: 200px;
+}
+
+.Liver-info {
+    flex: 1;
+}
+
+.Liver-info h3 {
+    font-size: 30px;
+    color:teal;
+}
+
+.Liver-info a {
+    text-decoration: none;
+    color:#7ec1a4;
+}
+
+.Liver-info a:hover {
+    color:#ffb87e;
+}
+
+/*リンクの設定*/
+/*公式ページ*/
+.officialpage {
+    color:#90ddbb;
+    text-decoration: none;
+    :hover {
+        color:#ffbf8f;
+    }
+}
+.officialpage ::before {
+    content: url(img/ico_NijisanjiMini.png);
+    margin-top: 10px;
+    margin-left: 5px;
+    vertical-align: sub;
+}
+/*公式YouTube*/
+.officialYouTube {
+    color:#90ddbb;
+    text-decoration: none;
+    :hover {
+        color:#ffbf8f;
+    }
+}
+.officialYouTube ::before {
+    content: url(img/ico_Youtube.png);
+    margin-top: 10px;
+    margin-left: 5px;
+    vertical-align: sub;
+}
+/*公式X*/
+.officialX {
+    color:#90ddbb;
+    text-decoration: none;
+    :hover {
+        color:#ffbf8f;
+    }
+}
+.officialX ::before {
+    content: url(img/ico_X.png);
+    margin-top: 10px;
+    margin-left: 5px;
+    vertical-align: sub;
+}
