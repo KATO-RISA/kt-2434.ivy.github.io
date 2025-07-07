@@ -16,57 +16,74 @@
   </header>
   <nav>
     <ul class="menu">
-      <li>
-        <a href="Liver.html">
-        <b>ライバー紹介</b></a>
-      </li>
+      <li><a href="Liver.html"><b>所属ライバー</b></a></li>
 
-      <li>
-          <a href="Official.html">
-          <b>公式番組</b></a>
-      </li>
+      <li><a href="Official.html"><b>公式番組</b></a></li>
 
-      <li>
-          <a href="Event.html">
-          <b>イベント</b></a>
-      </li>
-
-      <li>
-        <a href="Link.html">
-        <b>各リンク</b></a>
-      </li>
+      <li><a href="Link.html"><b>各リンク</b></a></li>
     </ul>
   </nav>
+  
+  <main id="contents">
+    <section>
+      <h2>にじさんじとは？</h2>
 
-    <main id="contents">
-      <section>
-        <h2>にじさんじとは？</h2>
-
-        <div class="image-nijisanji">
+      <div class="image-nijisanji">
         <img src="img/ico_Nijisanji.png" width="160" height="60" alt="にじさんじロゴ">
-        </div>
-        <p>ANYCOLOR株式会社が運営するバーチャルライバー(VTuber)グループで、名前の由来は<strong>「二次元と三次元をつなぐ」</strong>という意味から。<br>
+      </div>
+      <p>
+        ANYCOLOR株式会社が運営するバーチャルライバー(VTuber)グループで、
+        名前の由来は<strong>「二次元と三次元をつなぐ」</strong>という意味から。<br>
         <br>
         現在、約150名の多種多様なライバーが所属しており、<br>
-        雑談・ゲーム実況・カラオケ配信など様々な内容で毎日誰かしらが生配信を行っています。<br>
-        (生配信ではなく、動画投稿がメインのライバーもいます。)
+        雑談・ゲーム実況・カラオケ配信など様々な内容で毎日誰かしらが生配信を行っている。<br>
+        (生配信ではなく、動画投稿がメインのライバーもいる。)<br>
         音楽ライブをはじめ、様々なイベントが開催されたり、グッズ・デジタルコンテンツの販売、<br>
-        企業とのタイアップなど彼らの活動は多岐に渡ります。<br>
-        <br>
+        企業とのタイアップなど彼らの活動は多岐に渡る。<br>
+      </p>
+      <div class="EventVisual">
+        <img src="img/Nijifes.png" alt="にじフェスキービジュ">
+        <img src="img/SitRVisual.png" alt="SitRキービジュ">
+        <img src="img/Kurazusikorabo.png" alt="くら寿司2025コラボ">
+      </div>
+        
+      <p>
         また海外VTuber事業として、<br>
         2019年5月に中国VTuberグループ<b>「VirtuReal」</b>、
-        <div class="image-VirtuaReal">
-        <img src="img/ico_VirtuaReal.png" width="100" height="100" alt="VirtuaRealロゴ"></div><br>
-        2021年5月英語圏でのVTuber事業<b>「NIJISANJI EN」</b>が誕生し、始動しました。
-        <div class="image-EN"><img src="img/ico_NijisanjiEN.png" width="200" height="50" alt="ENロゴ"></div><br>
-        (なお、2019年7月からインドネシアVTuber事業<b>「NIJISANJI ID」</b>が、同年12月から韓国VTuber事業<b>「NIJISANJI KR」</b>が
-        それぞれ始動していましたが、<br>
-        2022年4月15日をもって「にじさんじ」に統合されました。)</p>
-      </section>
+      </p>
+      <div class="image-VirtuaReal">
+        <img src="img/ico_VirtuaReal.png" width="100" height="100" alt="VirtuaRealロゴ">
+      </div>
+      <p>
+        2021年5月英語圏でのVTuber事業<b>「NIJISANJI EN」</b>が誕生し、始動した。
+      </p>
+      <div class="image-EN"><img src="img/ico_NijisanjiEN.png" width="200" height="50" alt="ENロゴ"></div><br>
+        (なお、2019年7月からインドネシアの<b>「NIJISANJI ID」</b>が、同年12月から韓国の<b>「NIJISANJI KR」</b>が
+        それぞれ始動していたが、<br>
+        2022年4月15日をもって「にじさんじ」に統合された。)
+      </p>
+    </section>
   </main>
 
-</body>
+  <button id="backToTopBtn" title="↑">↑</button>
 
-<footer>
-  <small></small>
-</footer>
+  <script>
+    window.onscroll = function () {
+    const btn = document.getElementById("backToTopBtn");
+    if (document.documentElement.scrollTop > 200) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+  document.getElementById("backToTopBtn").onclick = function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  </script>
+
+  <footer>
+    <small>© 2025 にじさんじ紹介ページ</small>
+  </footer>
+</body>
+</html>
+
