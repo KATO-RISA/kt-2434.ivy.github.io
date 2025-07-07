@@ -4,23 +4,10 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'DotGothic16', sans-serif;
-    font-size: 90%;
     background-image: url(img/Bg.png);
     background-size: auto;
     background-position: center;
     background-attachment: fixed;
-}
-
-img, iframe {
-  max-width: 100%;
-  height: auto;
-}
-
-main, header, nav, section {
-  padding: 1rem;
-  max-width: 1200px;
-  margin: auto;
 }
 
 /*ヘッダー、ナビ、フッターの共通設定*/
@@ -30,29 +17,38 @@ header,nav,footer {
 
 /*ヘッダーの設定*/
 header {
-    background-color:#81efc3e0;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;   
+  width: 100%;
+  max-width: none;
+  height: 250px;
+  background-color: rgba(129, 239, 195, 0.88);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/*ページタイトルの設定*/
 header h1 {
     font-family: "DotGothic16", sans-serif;
     font-size: 1.8rem;
     margin: 30px 0;
     text-align: center;
+    color: #000;
+}
+
+header h1 a {
+    text-decoration: underline;
+    color: inherit;
 }
 
 header h1 a:hover {
     text-decoration: underline;
+    color: #f7986c;
 }
 
 header p {
     font-size: 16px;
     margin: 0;
+    color: #000;
 }
 
 /*ページ見出しの設定*/
@@ -71,21 +67,30 @@ h2 {
     margin-bottom: 15px;
 }
 
-
 .EventVisual {
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.EventVisual img {
+    width: 30%;
     height: auto;
-    align-items: center;
+    object-fit: contain;
 }
 
 .image-VirtuaReal {
+    width: 40px;
+    height: auto;
   margin-top: 30px;
 }
 
 .image-EN {
-  margin-top: 10px;
+    width: 40px;
+    height: auto;
+    margin-top: 10px;
 }
 
 /*ナビボタンの設定*/
@@ -94,15 +99,15 @@ h2 {
     display: flex;
     flex-direction: row;  /* ← 横並びに変更 */
     justify-content: center;
-    gap: 20px;  /* ボタン同士の間隔 */
+    gap: 100px;  /* ボタン同士の間隔 */
 }
-
 
 .menu li {
   list-style-type: none;
   display: inline-block;
   width: 200px;
   margin: 5px 0;
+  margin-top: 10px;
 }
 .menu a {
   display: block;
@@ -153,31 +158,30 @@ h2 {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  width: 100%;
   height: auto;
   gap: 10px;
-  padding: 20px;
-  margin: 20px;
+  margin: auto;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
 }
-
-.inner-box img {
-  width: 40%;
-  height: auto;
-  object-fit: cover; /* contain → cover の方がきれいに切れる */
-}
-
 
 .row {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2列に固定 */
+  grid-template-columns: repeat(6, 1fr); /* ← 6列固定 */
   gap: 20px;
 }
 
-.row img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
+.row a {
+    display: block;
+    width: 100%;
+}
 
+.row img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    display: block;
 }
 
 /*ルビの大きさ*/
@@ -187,31 +191,15 @@ rt {
 
 /*スクロールをスムーズにする*/
 html {
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
 }
-
-/* モバイル用メディアクエリ */
-@media (max-width: 768px) {
-  body {
-    font-size: 90%;
-  }
-
-  #contents {
-    padding: 20px;
-  }
-
-  .card-grid {
-    grid-template-columns: 1fr; /* スマホは1列 */
-    gap: 10px;
-  }
-}
-
 
 /*各ライバーの項目設定*/
-
 .card-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
 
@@ -239,11 +227,9 @@ html {
     color:#f7986c;
 }
 
-
-
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* PCは2列 */
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
@@ -276,45 +262,50 @@ html {
 }
 
 /*ライバー個別ページの設定*/
+
+* {
+  box-sizing: border-box;
+}
+
 .character-section {
-  padding: 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .character-section h3 {
   font-size: 2.7rem;
   font-family: "Yusei Magic", sans-serif;
-  flex-direction: column;
   text-align: center;
-  align-items: center;
 }
 
 .main-content {
   display: flex;
-  align-items: flex-start;
-  gap: 60px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  gap: 40px;
+  justify-content: space-between;
 }
 
 /* 左側：画像 + 動画 */
 .left-column {
-    width: 100%;
-    margin: 0;
     display: flex;
+    width: 48%;
     flex-direction: column;
     align-items: center;
 }
 
 /* 画像 */
 .profile-img {
-  width: 100%;
-  height: auto;
-  margin-top: 20px;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
 }
 
 /* 右側：文章 */
 .right-column {
-  width: 100%;
-  margin: 0;
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .right-column a {
@@ -329,23 +320,24 @@ html {
 
 /* 右コラム動画設定 */
 .video-container {
-    flex-direction: column;
-    align-items: center;
     display: flex;
-    gap: 10px;
+    flex-direction: row;
+    gap: 20px;
     margin-top: 40px;
+    align-items: flex-start;
 }
 
 .left-videos iframe {
-    width: 100%;
+    width: 250px;
     height: auto;
+    flex-direction: column;
     margin-bottom: 50px;
     border-radius: 8px;
 }
 
 .right-shorts iframe {
-    width: 100%;
-    height: auto;
+    width: 300px;
+    height: 600px;
     border-radius: 10px;
 }
 
